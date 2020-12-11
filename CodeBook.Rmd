@@ -7,19 +7,19 @@ files <- list.files(path_rf, recursive = TRUE)
 files
 
 4. Read data from files
-dataActivityTest <- read.table(file.path(path_rf, "test", "Y_test.txt"), header = FALSE)
+exe. dataActivityTest <- read.table(file.path(path_rf, "test", "Y_test.txt"), header = FALSE)
 
 5. Read the subject files
-dataSubjectTest <- read.table(file.path(path_rf, "test", "subject_test.txt"), header = FALSE)
+exe. dataSubjectTest <- read.table(file.path(path_rf, "test", "subject_test.txt"), header = FALSE)
 
 6. Read Fearures files
-dataFeaturesTest <- read.table(file.path(path_rf, "test", "X_test.txt"), header = FALSE)
+exe. dataFeaturesTest <- read.table(file.path(path_rf, "test", "X_test.txt"), header = FALSE)
 
 7. Concatenate the data tables
-dataSubject <- rbind(dataSubjectTrain, dataSubjectTest)
+exe. dataSubject <- rbind(dataSubjectTrain, dataSubjectTest)
 
 8. Set names to variables
-names(dataSubject) <- c("subject")
+exe. names(dataSubject) <- c("subject")
 
 9. Merge columns to get the data frame
 dataCombine <- cbind(dataSubject, dataActivity)
@@ -36,7 +36,7 @@ Data <- subset(Data, select = selectedNames)
 activityLabels <- read.table(file.path(path_rf, "activity_labels.txt"), header = FALSE)
 
 13. Appropriately labels
-names(Data) <- gsub("^t", "Time", names(Data))
+exe. names(Data) <- gsub("^t", "Time", names(Data))
 
 14. Creates a second, independent tidy data set an ouput it
 library(plyr)
